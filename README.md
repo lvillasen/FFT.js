@@ -5,7 +5,7 @@ Compact Fast Fourier transform function in JavaScript based on the Cooley–Tuke
 
 ## Demo
 
-**[[https://lvillasen.dds.net/demo/FFT.html](https://lvillasen.ddns.net/demo/FFT.html)]**
+**[https://lvillasen.dds.net/demo/FFT.html](https://lvillasen.ddns.net/demo/FFT.html)**
 
 This demo also illustrates the use of window functions and a simple spectrogram.
 
