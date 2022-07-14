@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FFT Demo</title>
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+    <div id="block_container0">
+
+        <h1> Fast Fourier Transform Demo</h1>
+        <h2> (Change any value to recalculate)</h2>
+        <hr>
+        <br>
+        <label>Function x(t): </label>
+
+        <input id="func" value="sin(2*PI*f1*t)+ 2*cos(2*PI*150*t)" type="text" onchange="Plot()">
+        <label>Frequency f1(t) in Hz:  </label>
+        <input id="f1" value="100" type="text" onchange="Plot()">
+        <label>Frequency f2(t) in Hz:  </label>
+
+        <input id="f2" value="20*(1+t)" type="text" onchange="Plot()">
+        <br>
+        <label>Time (s): </label>
+        <input id="time" value="2" type="text" onchange="Plot()">
+        <label>Sampling Rate (Hz): </label>
+        <input id="sampling" value="512" type="text" onchange="Plot()">
+        <select id="window" onchange="Plot()">
+                
+                <option value="None">Window: None</option>
+                <option value="Cosine">Window: Cosine</option>
+
+                <option value="Hanning">Window: Hanning</option>
+                <option value="Hamming">Window: Hamming</option>
+                <option value="Blackman">Window: Blackman</option>
+                </select>
+        <input type="checkbox" id="check1" name="check" onclick="onlyOne(this)">
+        <label>Real Part </label>
+        <input type="checkbox" id="check2" name="check" onclick="onlyOne(this)">
+        <label>Imag Part </label>
+        <input type="checkbox" id="check3" name="check" onclick="onlyOne(this)" checked>
+        <label>           Abs Value </label>
+        <input id="logscale" type="checkbox" onchange="Plot()">
+        <label>Log Scale</label>
+
+
+        <div id="block_container">
+            <div id="plot1" style="width:100%;max-width:700px"></div>
+            <div id="plot2" style="width:100%;max-width:700px"></div>
+        </div>
+
+
+        <hr>
+        <h1> Spectrogram</h1>
+        <hr>
+        <label>Number of Time Bins for Spectrogram: </label>
+        <input id="n_bines" value="16" type="text" onchange="Plot_Spectogram()">
+        <label>Select a Bin in Time Domain to Display:  </label>
+        <input id="bin_muestra" value="0" type="text" onchange="Plot_Spectogram()">
+
+
+        <div id="block_container2">
+            <div id="plot3" style="width:100%;max-width:700px"></div>
+            <div id="plot4" style="width:100%;max-width:700px"></div>
+
+            <hr>
+        </div>
+    </div>
+
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="../FFT.js"></script>
+    <script src="./main.js"></script>
+
+</body>
+
+</html>
