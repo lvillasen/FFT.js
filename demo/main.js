@@ -104,7 +104,7 @@
               //    range: [-1, 1],
               title: "x(t)"
           },
-          title: "Samples in Time Domain for Selected Bin"
+          title: "Samples in Time Domain"
       };
       var data1 = [{
           x: ts,
