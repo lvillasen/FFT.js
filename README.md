@@ -1,6 +1,6 @@
 # FFT
 
-Compact Fast Fourier transform function in JavaScript based on the Cooley–Tukey algorithm with a demo page that illustrates the use of window functions a a simple spectrogram.
+Compact Fast Fourier transform function in JavaScript based on the Cooley–Tukey algorithm with a demo page that illustrates the use of window functions and a simple spectrogram.
 
 
 ## Demo
