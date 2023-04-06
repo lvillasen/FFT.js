@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0">
+    <title>FFT Demo</title>
+    <link rel="stylesheet" href="./fft.css">
+
+</head>
+
+
+
+
+<body>
+    
+<div class="block_container"  style="background-color: #00b5e2; margin-left:10%; margin-right:10%;">    <p> </p>
+    <p> </p>
+    <br>
+
+        <h1> Fast Fourier Transform</h1>
+
+     
+        <h2> CIIEC-BUAP</h2>
+
+        <h3> (Change any parameter to update the plots)</h3>
+      <p style="font-size: 30px; margin-left: 80%;">March, 15th, 2023 </p>
+        <p style="font-size: 20px; margin-left: 80%;"><a href="https://github.com/lvillasen/FFT.js/" >Source Code</a> </p>
+        
+        <hr>
+
+        <h1> FFT</h1>
+        <hr>
+    <div id="center" style="background-color: #00b5e2; ">
+        <label>Function x(t): </label>
+
+        <input id="func" value="sin(2*PI*f1*t)+ 2*cos(2*PI*150*t)" type="text" onchange="Plot()">
+    </div>
+    <div id="center" style="background-color: #00b5e2; width:100%;">
+        <label>Frequency f1(t) in Hz:  </label>
+        <input id="f1" style="width:30%;" value="100" type="text" onchange="Plot()">
+    </div>
+    <div id="center" style="background-color: #00b5e2; width:100%; ">
+        <label style="text-align:left;" >Frequency f2(t) in Hz:  </label>
+
+        <input id="f2" style="width:30%;" value="20*(1+t)" type="text" onchange="Plot()">
+    </div>
+    <div id="center" style="background-color: #00b5e2; width:100%;">
+        <label>Time (s): </label>
+        <input id="time" style="width:20%;" value="2" type="text" onchange="Plot()">
+    </div>
+    <div id="center" style="background-color: #00b5e2; width:100%;">
+        <label>Sampling Rate (Hz): </label>
+        <input id="sampling" style="width:20%;" value="512" type="text" onchange="Plot()">
+    </div>
+    <div id="center" style="background-color: #00b5e2; width:100%;">
+        <select id="window" onchange="Plot()">
+
+                
+                <option value="None">Window: None</option>
+                <option value="Cosine">Window: Cosine</option>
+
+                <option value="Hanning">Window: Hanning</option>
+                <option value="Hamming">Window: Hamming</option>
+                <option value="Blackman">Window: Blackman</option>
+                </select>
+    </div>
+    <div id="center" style="background-color: #00b5e2; width:100%;">
+        <input type="checkbox" id="check1" name="check" onclick="onlyOne(this)">
+        <label>Real Part </label>
+        <input type="checkbox" id="check2" name="check" onclick="onlyOne(this)">
+        <label>Imag Part </label>
+        <input type="checkbox" id="check3" name="check" onclick="onlyOne(this)" checked>
+        <label>           Abs Value </label>
+        <input id="logscale" type="checkbox" onchange="Plot()">
+        <label>Log Scale</label>
+        <p> </p>
+
+    </div>
+    <div class="block_container" style="background-color: #00b5e2; width:100%;">
+        <div id="plot1" style="width:100%;"></div>
+    </div>  
+    <div class="block_container" style="background-color: #00b5e2; width:100%;">
+        <div id="plot2" style="width:100%;"></div>
+    </div>
+
+        
+<br>
+<br>
+      
+
+        <hr>
+        <h1> Spectrogram</h1>
+        <hr>
+    <div id="center" style="background-color: #00b5e2; max-width:100%;">
+        <label id="label1"> Number of Bins for Spectrogram: </label>
+        <input id="n_bines" style="width:20%;" value="16" type="text" onchange="Plot_Spectogram()">
+    </div>
+    <div id="center" style="background-color: #00b5e2; max-width:100%;">
+    <label>Bin to Display in Time Domain :  </label>
+        <input id="bin_muestra" style="width:20%;" value="0" type="text" onchange="Plot_Spectogram()">
+    </div>
+    <div class="block_container" style="background-color: #00b5e2; width:100%;">
+        <div id="plot3" style="width:100%;"></div>
+    </div>  
+    <div class="block_container" style="background-color: #00b5e2; width:100%;">
+        <div id="plot4" style="width:100%;"></div>
+    </div>
+     <hr>
+     <p> </p>
+     <p> </p>
+
+     
+  
+
+    
+
+</body>
+
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<script src="../FFT.js"></script>
+<script src="./main.js"></script>
+</html>

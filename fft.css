@@ -1,0 +1,94 @@
+html,
+body {
+    height: 100%;
+    background-color: #00b5e2;
+}
+
+
+       
+
+block_container {
+
+    text-align: center;
+
+}
+
+
+
+.center {
+  border: 5px solid;
+  text-align: center;
+  margin-left: 20px;
+  justify-content: safe left;
+}
+
+.label1 {
+
+  text-align: left;
+  margin-left: 20px;
+}
+
+
+
+
+h1 {
+    font-size: 40pt;
+    font-family: arial;
+    color: black;
+    text-align: center;
+}
+
+h2 {
+    font-size: 30pt;
+    font-family: arial;
+    color: black;
+    text-align: center;
+}
+
+h3 {
+    font-size: 15pt;
+    font-family: arial;
+    color: black;
+    text-align: center;
+}
+
+#func {
+    border: 1;
+    border-color: blue;
+    color: blue;
+    height: auto;
+    width: 30%;
+}
+
+input {
+    font-size: 15pt;
+    fon border: 1;
+    border-color: blue;
+    color: blue;
+    height: auto;
+}
+
+#window {
+    font-size: 15pt;
+    color: blue;
+}
+
+label {
+    font-size: 15pt;
+    color: rgb(9, 100, 35);
+}
+
+#time,
+#sampling,
+#n_bines,
+#bin_muestra {
+    width: 5%;
+}
+
+#check1,
+#check2,
+#check3,
+#logscale {
+    width: 20px;
+    height: 20px;
+}
