@@ -13,7 +13,7 @@ This demo also illustrates the use of window functions and a simple spectrogram.
 
 ## Live Demo
 
-https://ciiec.buap.mx/FFT.js/demo/
+https://ciiec.buap.mx/FFT.js/
 
 ## Usage
 
