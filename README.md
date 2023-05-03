@@ -6,7 +6,7 @@ Compact Fast Fourier transform function in JavaScript based on the Cooley–Tuke
 ## Demo
 
 - Clone the repository
-- Open the index.html file with any navigator
+- Open the file index.html with any web browser
 
 
 This demo also illustrates the use of window functions and a simple spectrogram.
