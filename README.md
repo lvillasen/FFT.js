@@ -17,26 +17,26 @@ https://ciiec.buap.mx/FFT.js/
 
 ## Usage
 
-   Assuming x is the time domain array of size N with the sampled data, , where N is a power of 2, then
+   Assuming x is the time domain array of size N with the sampled data, where N is a power of 2, then
 
 
-  fft = FFT(x);
+     fft = FFT(x);
   
-  X_real = new Array(my_x.length / 2).fill(0);
+     X_real = new Array(my_x.length / 2).fill(0);
   
-  X_imag = new Array(my_x.length / 2).fill(0);
+     X_imag = new Array(my_x.length / 2).fill(0);
   
-  X_abs = new Array(my_x.length / 2).fill(0);
+     X_abs = new Array(my_x.length / 2).fill(0);
   
-  for (var i = 0; i < N / 2; i += 1) {
+     for (var i = 0; i < N / 2; i += 1) {
   
-      X_real[i] = fft[i].re;
+         X_real[i] = fft[i].re;
       
-      X_imag[i] = fft[i].im;
+         X_imag[i] = fft[i].im;
       
-      X_abs[i] = Math.sqrt(fft[i].re * fft[i].re + fft[i].im * fft[i].im);
+         X_abs[i] = Math.sqrt(fft[i].re * fft[i].re + fft[i].im * fft[i].im);
   
-  }
+     }
 
 where 
 
